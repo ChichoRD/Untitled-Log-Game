@@ -9,13 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3781615354741636074}
+  - component: {fileID: 3534180354447464176}
   - component: {fileID: 5775764517897329428}
-<<<<<<< Updated upstream
   - component: {fileID: 4605705697050684451}
   - component: {fileID: 2638974590013199169}
   - component: {fileID: 6009078752527520434}
-=======
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Movement
   m_TagString: Untagged
@@ -34,13 +32,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1316634599128278238}
-  - {fileID: 7315250261269705979}
+  m_Children: []
   m_Father: {fileID: 8622561971984950705}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!114 &3534180354447464176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,8 +50,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movementAction: {fileID: -6819468265327514421, guid: 9074b127a1cff224f8078d4414332521, type: 3}
   _sprintAction: {fileID: 2353382668192870773, guid: 9074b127a1cff224f8078d4414332521, type: 3}
-=======
->>>>>>> Stashed changes
 --- !u!114 &5775764517897329428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,62 +62,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1208383eedf1ec448ef675f5613fd70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   _performer: {fileID: 4605705697050684451}
   _movProvider: {fileID: 3534180354447464176}
   _baseSpeed: 5
   _speedMultiplier: 2
 --- !u!114 &4605705697050684451
-=======
-  _performer: {fileID: 402004214448687355}
-  _provider: {fileID: 6786309588852354598}
---- !u!1 &3377433252506161472
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7315250261269705979}
-  - component: {fileID: 402004214448687355}
-  m_Layer: 0
-  m_Name: Performer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7315250261269705979
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3377433252506161472}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3781615354741636074}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &402004214448687355
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3377433252506161472}
+  m_GameObject: {fileID: 1827460170385239690}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 906b0a514b0eb3a4ab02a0a0957455cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 5317936367236080349}
-<<<<<<< Updated upstream
 --- !u!114 &2638974590013199169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,9 +124,6 @@ MonoBehaviour:
   _movProvider: {fileID: 3534180354447464176}
   _speedIncrease: 50
   _speedIncreaseTime: 0.03
-=======
-  _speed: 5
->>>>>>> Stashed changes
 --- !u!1 &4417144037967995119
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,11 +291,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< Updated upstream
 --- !u!1 &8985099651979751557
-=======
---- !u!1 &8060516233045257450
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -352,62 +299,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
   - component: {fileID: 1236725465853785955}
   - component: {fileID: 3817602840592260758}
   - component: {fileID: 1901166657754401214}
   m_Layer: 0
   m_Name: DashParticles
-=======
-  - component: {fileID: 1316634599128278238}
-  - component: {fileID: 6786309588852354598}
-  m_Layer: 0
-  m_Name: Input
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
 --- !u!4 &1236725465853785955
-=======
---- !u!4 &1316634599128278238
->>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 8985099651979751557}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-=======
-  m_GameObject: {fileID: 8060516233045257450}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
->>>>>>> Stashed changes
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-<<<<<<< Updated upstream
   m_Father: {fileID: 8622561971984950705}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &3817602840592260758
 ParticleSystem:
-=======
-  m_Father: {fileID: 3781615354741636074}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6786309588852354598
-MonoBehaviour:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 8985099651979751557}
   serializedVersion: 8
   lengthInSec: 2
@@ -5181,12 +5103,3 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
-=======
-  m_GameObject: {fileID: 8060516233045257450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 227f3bf5cb19a004d84545cc2be3be02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _movementAction: {fileID: -6819468265327514421, guid: 9074b127a1cff224f8078d4414332521, type: 3}
->>>>>>> Stashed changes
