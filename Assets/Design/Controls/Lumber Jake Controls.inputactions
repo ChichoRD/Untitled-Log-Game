@@ -118,26 +118,81 @@
             "id": "9b3bec73-fe70-43d7-9477-7c0a96f54e20",
             "actions": [
                 {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "21de66be-de49-4a34-ae1e-b85826dfee6f",
-                    "expectedControlType": "Button",
+                    "name": "Directional Attack",
+                    "type": "Value",
+                    "id": "eef1f51a-e30d-41b1-a988-aefbf641554d",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "e9f5a25b-148f-4698-85f9-c648b3265cb2",
-                    "path": "",
+                    "name": "Pointer + Press",
+                    "id": "de212b60-7683-4b64-9a8f-60320e273615",
+                    "path": "OneModifier",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
+                    "action": "Directional Attack",
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "fde65a10-4739-4e20-a6b3-80cd5af169ab",
+                    "path": "<Pointer>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Directional Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "4b59c244-6d77-443b-ac3f-2cee4443be5c",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Directional Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Right Stick + Right Trigger",
+                    "id": "e8a46a47-334a-4e4e-b897-8da9103c224a",
+                    "path": "OneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Directional Attack",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "6b2260fb-586f-468d-a742-92c6a6f0263e",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Directional Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "295f5ea5-d2df-420f-9808-66ae4473da19",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Directional Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
