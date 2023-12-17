@@ -27,11 +27,6 @@ public class MovementPerformer : MonoBehaviour
         return true;
     }
 
-    public bool TryDash(Vector2 dashAcceleration)
-    {
-        _rigidbody.AddForce(_rigidbody.mass * dashAcceleration,ForceMode2D.Force);
-
-        return true;
-    }
+   
 
 }

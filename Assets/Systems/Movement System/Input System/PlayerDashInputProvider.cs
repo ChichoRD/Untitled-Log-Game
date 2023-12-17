@@ -10,7 +10,7 @@ public class PlayerDashInputProvider : MonoBehaviour
     private InputActionReference _dashAction;
 
     [field: SerializeField]
-    public UnityEvent DashPerformed { get; private set; }
+    public UnityEvent DashInputPerformed { get; private set; }
 
 
     private void Awake()
@@ -36,7 +36,7 @@ public class PlayerDashInputProvider : MonoBehaviour
 
     private void DashActionPerformed(InputAction.CallbackContext obj)
     {
-        DashPerformed.Invoke();
+        DashInputPerformed.Invoke();
     }
 
 

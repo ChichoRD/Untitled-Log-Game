@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2230388677993211477}
   - component: {fileID: 8412924518971220027}
   - component: {fileID: 5912001540149268729}
+  - component: {fileID: 7142279991398208042}
   m_Layer: 0
   m_Name: Planar
   m_TagString: Untagged
@@ -59,10 +60,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1208383eedf1ec448ef675f5613fd70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _performer: {fileID: 6603534826806761008}
+  _performer: {fileID: 7142279991398208042}
   _movProvider: {fileID: 8412924518971220027}
   _baseSpeed: 5
   _speedMultiplier: 2
+--- !u!114 &7142279991398208042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776460138331291449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906b0a514b0eb3a4ab02a0a0957455cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 5317936367236080349}
 --- !u!1 &1827460170385239690
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +86,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3781615354741636074}
-  - component: {fileID: 6603534826806761008}
   m_Layer: 0
   m_Name: Movement
   m_TagString: Untagged
@@ -97,19 +110,6 @@ Transform:
   m_Father: {fileID: 8622561971984950705}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6603534826806761008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827460170385239690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 906b0a514b0eb3a4ab02a0a0957455cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 5317936367236080349}
 --- !u!1 &2221780518744467386
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +425,8 @@ GameObject:
   - component: {fileID: 8976035267323460280}
   - component: {fileID: 6260313958294634191}
   - component: {fileID: 2139985339813070259}
+  - component: {fileID: 4215940981725285520}
+  - component: {fileID: 5532741256927147683}
   m_Layer: 0
   m_Name: Dash
   m_TagString: Untagged
@@ -461,6 +463,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dashAction: {fileID: -7981012661183051434, guid: 9074b127a1cff224f8078d4414332521, type: 3}
+  <DashInputPerformed>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2139985339813070259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4913702602396945178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f21668ed8126534f9b45fb313a4a161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _performer: {fileID: 5532741256927147683}
+  _dashProvider: {fileID: 6260313958294634191}
+  _movProvider: {fileID: 8412924518971220027}
+  _speedIncrease: 50
+  _speedIncreaseTime: 0.03
   <DashPerformed>k__BackingField:
     m_PersistentCalls:
       m_Calls:
@@ -476,7 +498,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2139985339813070259
+--- !u!114 &4215940981725285520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -485,14 +507,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 4913702602396945178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f21668ed8126534f9b45fb313a4a161, type: 3}
+  m_Script: {fileID: 11500000, guid: 73f9c5b7f9a336a418dcc4049172fe36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _performer: {fileID: 6603534826806761008}
-  _dashProvider: {fileID: 6260313958294634191}
-  _movProvider: {fileID: 8412924518971220027}
-  _speedIncrease: 50
-  _speedIncreaseTime: 0.03
+  _rigidbody: {fileID: 5317936367236080349}
+--- !u!114 &5532741256927147683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4913702602396945178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcf1e03d46b7660429018c4257d4d9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dashPerformer: {fileID: 4215940981725285520}
+  _dashCoolDown: 0.5
 --- !u!1 &6163814658514480013
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,7 +630,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5005
+  m_SortingOrder: 5002
   m_Sprite: {fileID: 21300000, guid: 768f7a148702d4c4e82809ea512f16ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
