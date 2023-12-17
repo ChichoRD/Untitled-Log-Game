@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TreeInputProvider : MonoBehaviour
 {
-    [SerializeField]
-    private Transform _loganTransform;
+    [field: SerializeField]
+    public Transform LoganTransform {  private get; set; }
     [SerializeField]
     private Transform _myTransform;
 
@@ -13,7 +13,7 @@ public class TreeInputProvider : MonoBehaviour
     {
         get
         {
-            return  (_loganTransform.position - _myTransform.position).normalized;
+            return  (LoganTransform.position - _myTransform.position).normalized;
         } 
     }
 
