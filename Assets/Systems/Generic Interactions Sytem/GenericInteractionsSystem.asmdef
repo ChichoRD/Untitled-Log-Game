@@ -2,7 +2,8 @@
     "name": "GenericInteractionsSystem",
     "rootNamespace": "",
     "references": [
-        "GUID:ccb41c75366887a41918edc119246d22"
+        "GUID:ccb41c75366887a41918edc119246d22",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

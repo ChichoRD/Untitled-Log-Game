@@ -5,6 +5,6 @@ namespace GenericInteractions.Grabbable
     internal interface IGrabRequestInfo
     {
         Transform GrabParent { get; }
-        float GetLerpProgress(float grabTime);
+        float GetGrabProgress(float grabTime);
     }
 }
