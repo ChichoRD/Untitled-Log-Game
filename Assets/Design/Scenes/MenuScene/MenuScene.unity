@@ -211,6 +211,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.08
       objectReference: {fileID: 0}
+    - target: {fileID: 5356591419770994834, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4922
+      objectReference: {fileID: 0}
     - target: {fileID: 6408546961597229812, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
       propertyPath: m_Name
       value: Log(an) (1)
@@ -460,6 +464,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 62898857}
     m_Modifications:
+    - target: {fileID: 5356591419770994834, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5041
+      objectReference: {fileID: 0}
     - target: {fileID: 6408546961597229812, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
       propertyPath: m_Name
       value: Log(an) (1)
@@ -517,6 +525,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 62898857}
     m_Modifications:
+    - target: {fileID: 5356591419770994834, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5091
+      objectReference: {fileID: 0}
     - target: {fileID: 6408546961597229812, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
       propertyPath: m_Name
       value: Log(an) (8)
@@ -675,6 +687,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5356591419770994834, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4921
+      objectReference: {fileID: 0}
     - target: {fileID: 6408546961597229812, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
       propertyPath: m_Name
       value: Log(an) (2)
@@ -783,7 +799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5254809860860311789, guid: de08673b6f1395049b1f379b041c58ca, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.119205296
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5254809860860311789, guid: de08673b6f1395049b1f379b041c58ca, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
@@ -791,11 +807,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5254809860860311789, guid: de08673b6f1395049b1f379b041c58ca, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.76134413
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5254809860860311789, guid: de08673b6f1395049b1f379b041c58ca, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9989701
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5254809860860311790, guid: de08673b6f1395049b1f379b041c58ca, type: 3}
       propertyPath: m_Name
@@ -949,7 +965,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 738114347}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: cf6d648e5562f754da79a9489fa9fca1, type: 2}
+        m_TargetAssemblyTypeName: ApplicationQuitterRequesterObject, Assembly-CSharp
+        m_MethodName: RequestApplicationExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &738114347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,6 +1023,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 62898857}
     m_Modifications:
+    - target: {fileID: 5356591419770994834, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4981
+      objectReference: {fileID: 0}
     - target: {fileID: 6408546961597229812, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
       propertyPath: m_Name
       value: Log(an) 1
@@ -1057,6 +1089,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 62898857}
     m_Modifications:
+    - target: {fileID: 5356591419770994834, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5072
+      objectReference: {fileID: 0}
     - target: {fileID: 6408546961597229812, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
       propertyPath: m_Name
       value: Log(an) (5)
@@ -1189,6 +1225,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 62898857}
     m_Modifications:
+    - target: {fileID: 5356591419770994834, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5091
+      objectReference: {fileID: 0}
     - target: {fileID: 6408546961597229812, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
       propertyPath: m_Name
       value: Log(an) (7)
@@ -1308,6 +1348,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 62898857}
     m_Modifications:
+    - target: {fileID: 5356591419770994834, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5041
+      objectReference: {fileID: 0}
     - target: {fileID: 6408546961597229812, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
       propertyPath: m_Name
       value: Log(an) (2)
@@ -1426,6 +1470,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 62898857}
     m_Modifications:
+    - target: {fileID: 5356591419770994834, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5072
+      objectReference: {fileID: 0}
     - target: {fileID: 6408546961597229812, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
       propertyPath: m_Name
       value: Log(an) (4)
@@ -1698,6 +1746,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5356591419770994834, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4921
+      objectReference: {fileID: 0}
     - target: {fileID: 6408546961597229812, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
       propertyPath: m_Name
       value: Log(an)
@@ -1755,6 +1807,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 62898857}
     m_Modifications:
+    - target: {fileID: 5356591419770994834, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4981
+      objectReference: {fileID: 0}
     - target: {fileID: 6408546961597229812, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
       propertyPath: m_Name
       value: Log(an) 2
@@ -2002,7 +2058,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1360761364}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: a037cb993cd785d44b7ad8c81f8a2e75, type: 2}
+        m_TargetAssemblyTypeName: SceneLoaderRequesterObject, Assembly-CSharp
+        m_MethodName: RequestAsyncSceneLoad
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GameScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1360761364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2463,6 +2531,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 62898857}
     m_Modifications:
+    - target: {fileID: 5356591419770994834, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5091
+      objectReference: {fileID: 0}
     - target: {fileID: 6408546961597229812, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
       propertyPath: m_Name
       value: Log(an) (6)
@@ -2525,6 +2597,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 62898857}
     m_Modifications:
+    - target: {fileID: 5356591419770994834, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5011
+      objectReference: {fileID: 0}
     - target: {fileID: 6408546961597229812, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
       propertyPath: m_Name
       value: Log(an)
@@ -2778,6 +2854,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 62898857}
     m_Modifications:
+    - target: {fileID: 5356591419770994834, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5011
+      objectReference: {fileID: 0}
     - target: {fileID: 6408546961597229812, guid: 4be91a36981824e4b9c70a3fc4ddef2b, type: 3}
       propertyPath: m_Name
       value: Log(an) (3)
