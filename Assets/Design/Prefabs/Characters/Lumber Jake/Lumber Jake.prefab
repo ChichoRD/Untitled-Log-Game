@@ -62,6 +62,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _performer: {fileID: 7142279991398208042}
   _movProvider: {fileID: 8412924518971220027}
+  <MovementPerformed>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
   _baseSpeed: 5
   _speedMultiplier: 2
 --- !u!114 &7142279991398208042
@@ -342,6 +345,7 @@ GameObject:
   - component: {fileID: 8622561971984950705}
   - component: {fileID: 6408919011006921880}
   - component: {fileID: 5317936367236080349}
+  - component: {fileID: 170218879989661407}
   m_Layer: 0
   m_Name: Lumber Jake
   m_TagString: Untagged
@@ -414,6 +418,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &170218879989661407
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4417144037967995119}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e75e0a3acf150834f9ee10f654783bb2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4913702602396945178
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +592,7 @@ GameObject:
   - component: {fileID: 169783006050140053}
   - component: {fileID: 6558256354068573482}
   - component: {fileID: 2446113990917903374}
+  - component: {fileID: 2670252076738644883}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -630,7 +656,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5002
+  m_SortingOrder: 5005
   m_Sprite: {fileID: 21300000, guid: 768f7a148702d4c4e82809ea512f16ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -656,6 +682,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <SortOrder>k__BackingField: 5000
   yBias: -0.5
+--- !u!114 &2670252076738644883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6403826937265726917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 435735a1e97f590498c54e9df862e994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movApplier: {fileID: 5912001540149268729}
+  _spriteRenderer: {fileID: 6558256354068573482}
 --- !u!1 &8778960449520296753
 GameObject:
   m_ObjectHideFlags: 0
