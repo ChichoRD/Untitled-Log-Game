@@ -2,18 +2,16 @@ using InteractionSystem.Data;
 using InteractionSystem.Handler;
 using InteractionSystem.Interactable;
 using InteractionSystem.Provider;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace GenericInteractions.Grabbable
 {
-    public class PlayerInputtedInteractionHandler : MonoBehaviour
+    public class PlayerInputtedGrabInteractionHandler : MonoBehaviour
     {
         [SerializeField]
-        private InputActionReference _interactAction;
+        private InputActionReference _grabInteractAction;
 
         [SerializeField]
         private AnimationCurveGrabRequestInfo _grabRequestInfo;
@@ -23,12 +21,12 @@ namespace GenericInteractions.Grabbable
 
         private void Awake()
         {
-            _interactAction.action.performed += OnInteractionActionPerformed;
+            _grabInteractAction.action.performed += OnInteractionActionPerformed;
         }
 
         private void OnEnable()
         {
-            _interactAction.action.Enable();
+            _grabInteractAction.action.Enable();
         }
 
         private void Start()
@@ -39,12 +37,12 @@ namespace GenericInteractions.Grabbable
 
         private void OnDisable()
         {
-            _interactAction.action.Disable();
+            _grabInteractAction.action.Disable();
         }
 
         private void OnDestroy()
         {
-            _interactAction.action.performed -= OnInteractionActionPerformed;
+            _grabInteractAction.action.performed -= OnInteractionActionPerformed;
         }
 
         private void OnInteractionActionPerformed(InputAction.CallbackContext context)

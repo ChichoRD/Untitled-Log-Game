@@ -8,9 +8,6 @@ namespace GenericInteractions.Grabbable
     internal class LerpGrabbableInteractable : MonoBehaviour, IInteractable<IGrabRequestInfo, IGrabResponse>, IRequestOnlyInteractable<IGrabRequestInfo>
     {
         [SerializeField]
-        [Min(float.Epsilon)]
-        private float _lerpTime;
-        [SerializeField]
         private Transform _transform;
 
         private Coroutine _grabCoroutine;
@@ -49,10 +46,11 @@ namespace GenericInteractions.Grabbable
             Vector3 startPosition = transform.position;
             Quaternion startRotation = transform.rotation;
 
-            float delta = Time.deltaTime / _lerpTime;
-            for (float t = 0; t < 1.0f; t += delta)
+            float delta = Time.deltaTime;
+            float progress = 0.0f;
+            for (float t = 0.0f; progress < 1.0f; t += delta)
             {
-                float progress = grabRequest.GetGrabProgress(t);
+                progress = grabRequest.GetGrabProgress(t);
                 Vector3 targetPosition = Vector3.Lerp(startPosition, grabRequest.GrabParent.position, progress);
                 Quaternion targetRotation = Quaternion.Slerp(startRotation, grabRequest.GrabParent.rotation, progress);
 

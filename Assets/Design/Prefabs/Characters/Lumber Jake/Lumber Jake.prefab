@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776f69c49e78f98458e41cf6b59f9e0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactAction: {fileID: 5248204623569398188, guid: 9074b127a1cff224f8078d4414332521, type: 3}
+  _grabInteractAction: {fileID: 5248204623569398188, guid: 9074b127a1cff224f8078d4414332521, type: 3}
   _grabRequestInfo:
     <GrabParent>k__BackingField: {fileID: 224021415062975054}
     <GrabProgressCurve>k__BackingField:
@@ -290,15 +290,16 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 1
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: -1.488169
+        outSlope: -1.488169
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.07916665
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    <GrabTime>k__BackingField: 0.5
 --- !u!1 &3021185816485217333
 GameObject:
   m_ObjectHideFlags: 0
