@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8165600881338576292}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3351096335566851988}
   - component: {fileID: 7187488840372775282}
   - component: {fileID: 8770618848975347108}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Delogger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 6897413307641249482}
   - component: {fileID: 7824275993901558486}
   - component: {fileID: 2883918278067302469}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5029
+  m_SortingOrder: 5187
   m_Sprite: {fileID: 21300000, guid: 2f81f728604d73946b78afa746cb2beb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 192230880953094450}
   - component: {fileID: 4963267336825092687}
   - component: {fileID: 8884190535639113832}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Planar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
