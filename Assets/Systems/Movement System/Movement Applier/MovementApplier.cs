@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MovementApplier : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class MovementApplier : MonoBehaviour
 
     [SerializeField]
     private PlayerMovementInputProvider _movProvider;
+
+    [field: SerializeField]
+    public UnityEvent<Vector2> MovementPerformed { get; private set; } 
 
     [SerializeField]
     private float _baseSpeed = 1.0f;
@@ -19,14 +23,19 @@ public class MovementApplier : MonoBehaviour
     private void FixedUpdate()
     {
         MovementInput completeMovement = _movProvider.MovementInput;
+
+        Vector2 movementVelocity = completeMovement.movement * _baseSpeed;
+
         if (completeMovement.isSprinting)
         {
-            _performer.TryMove(completeMovement.movement * _baseSpeed * _speedMultiplier);
+            movementVelocity *= _speedMultiplier;
         }
-        else
+
+        if(_performer.TryMove(movementVelocity))
         {
-            _performer.TryMove(completeMovement.movement * _baseSpeed);
+            MovementPerformed.Invoke(movementVelocity);
         }
+
 
         
 

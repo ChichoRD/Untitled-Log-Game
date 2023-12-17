@@ -1,10 +1,10 @@
 using UnityEngine;
-
+using UnityEngine.Events;
 
 public class DashApplier : MonoBehaviour
 {
     [SerializeField]
-    private MovementPerformer _performer;
+    private ConstrainedDashPerformer _performer;
 
     [SerializeField]
     private PlayerDashInputProvider _dashProvider;
@@ -19,14 +19,18 @@ public class DashApplier : MonoBehaviour
 
     private Vector2 _lastValidDirection = Vector2.right;
 
+    [field:SerializeField]
+    public UnityEvent DashPerformed { get; private set; }
+
+
     private void Awake()
     {
-        _dashProvider.DashPerformed.AddListener(OnDashPerformed);
+        _dashProvider.DashInputPerformed.AddListener(OnDashPerformed);
     }
 
     private void OnDestroy()
     {
-        _dashProvider.DashPerformed.RemoveListener(OnDashPerformed);
+        _dashProvider.DashInputPerformed.RemoveListener(OnDashPerformed);
     }
 
     private void Update()
@@ -43,6 +47,12 @@ public class DashApplier : MonoBehaviour
         //m * dv = f * dt
         // f = m * dv/dt
         Vector2 dashAcceleration = (_speedIncrease/ _speedIncreaseTime)  * _lastValidDirection;
-        _performer.TryDash(dashAcceleration);
+        if (_performer.TryDash(dashAcceleration))
+        {
+            DashPerformed.Invoke();
+        }
     }
+
+
+   
 }
