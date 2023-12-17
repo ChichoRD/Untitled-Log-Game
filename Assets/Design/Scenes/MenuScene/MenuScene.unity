@@ -811,7 +811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5254809860860311789, guid: de08673b6f1395049b1f379b041c58ca, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 1.0002592
       objectReference: {fileID: 0}
     - target: {fileID: 5254809860860311790, guid: de08673b6f1395049b1f379b041c58ca, type: 3}
       propertyPath: m_Name
@@ -2837,6 +2837,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3565182008339313367, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6130284329216270839, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
       propertyPath: m_Name
       value: Delogger (1)
@@ -3014,6 +3018,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 951888806642239257, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3565182008339313367, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6130284329216270839, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
