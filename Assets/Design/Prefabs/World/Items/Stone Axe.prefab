@@ -7,9 +7,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1299491345807773555, guid: cb8b3eec97ee40a42b770b5b77e7222a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2587187884367333949, guid: cb8b3eec97ee40a42b770b5b77e7222a, type: 3}
       propertyPath: m_Name
       value: Stone Axe
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587187884367333949, guid: cb8b3eec97ee40a42b770b5b77e7222a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691148362663969350, guid: cb8b3eec97ee40a42b770b5b77e7222a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6791043667220256974, guid: cb8b3eec97ee40a42b770b5b77e7222a, type: 3}
       propertyPath: m_RootOrder
@@ -54,6 +66,14 @@ PrefabInstance:
     - target: {fileID: 6791043667220256974, guid: cb8b3eec97ee40a42b770b5b77e7222a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013397589178357065, guid: cb8b3eec97ee40a42b770b5b77e7222a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610891957944356888, guid: cb8b3eec97ee40a42b770b5b77e7222a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8995076684349199376, guid: cb8b3eec97ee40a42b770b5b77e7222a, type: 3}
       propertyPath: m_Sprite

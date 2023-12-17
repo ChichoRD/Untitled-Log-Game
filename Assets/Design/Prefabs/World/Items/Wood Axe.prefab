@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8343766684988579936}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: SpriteAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3956942408513697443}
   - component: {fileID: 4721680187641021025}
   - component: {fileID: 8922595642642932008}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Wood Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3774188191648410408}
   - component: {fileID: 2924660739000655994}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Interactable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac7d2376c1d8cb47862162d49708a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parentBeforeGrab: 1
+  _parentBeforeGrab: 0
   _transform: {fileID: 6791043667220256974}
 --- !u!1 &7013397589178357065
 GameObject:
@@ -193,7 +193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5096963923662109234}
   - component: {fileID: 4352115133753065913}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Grabbable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e86397976fa4140439f2af00b3e5924c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lerpTime: 0.5
   _transform: {fileID: 6791043667220256974}
 --- !u!1 &8610891957944356888
 GameObject:
@@ -239,7 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 774002776564522025}
   - component: {fileID: 8995076684349199376}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

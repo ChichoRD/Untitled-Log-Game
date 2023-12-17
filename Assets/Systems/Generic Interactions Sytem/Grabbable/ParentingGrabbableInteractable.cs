@@ -24,9 +24,10 @@ namespace GenericInteractions.Grabbable
         public IGrabResponse TryInteract(IInteractionRequest<IGrabRequestInfo> interactionRequestInfo)
         {
             IGrabResponse grabResponse = _grabbableInteractable.TryInteract(interactionRequestInfo);
-            _ = StartCoroutine(_parentBeforeGrab
-                ? ParentBeforeGrabCoroutine(interactionRequestInfo.RequestInfo, grabResponse)
-                : ParentAfterGrabCoroutine(interactionRequestInfo.RequestInfo, grabResponse));
+            if (grabResponse.Success)
+                _ = StartCoroutine(_parentBeforeGrab
+                    ? ParentBeforeGrabCoroutine(interactionRequestInfo.RequestInfo, grabResponse)
+                    : ParentAfterGrabCoroutine(interactionRequestInfo.RequestInfo, grabResponse));
 
             return grabResponse;
         }
