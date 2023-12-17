@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8165600881338576292}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3351096335566851988}
   - component: {fileID: 7187488840372775282}
   - component: {fileID: 8770618848975347108}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Delogger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 6897413307641249482}
   - component: {fileID: 7824275993901558486}
   - component: {fileID: 2883918278067302469}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 192230880953094450}
   - component: {fileID: 4963267336825092687}
   - component: {fileID: 8884190535639113832}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Planar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a65afd350a9bc9a45b0ce390e4ad7e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loganTransform: {fileID: 0}
+  <LoganTransform>k__BackingField: {fileID: 0}
   _myTransform: {fileID: 951888806642239257}
 --- !u!114 &8884190535639113832
 MonoBehaviour:
