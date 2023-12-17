@@ -4,3 +4,6 @@
 [submodule "Assets/Systems/Unity-Save-System"]
 	path = Assets/Systems/Unity-Save-System
 	url = https://github.com/ChichoRD/Unity-Save-System.git
+[submodule "Assets/Systems/Centralised-Request-System"]
+	path = Assets/Systems/Centralised-Request-System
+	url = https://github.com/ChichoRD/Centralised-Request-System.git
