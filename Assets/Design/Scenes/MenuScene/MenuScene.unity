@@ -1409,6 +1409,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 784412720}
     m_Modifications:
+    - target: {fileID: 1827460170385239690, guid: 38e6a1a1b94caa542bd8e52a5242af0b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4417144037967995119, guid: 38e6a1a1b94caa542bd8e52a5242af0b, type: 3}
       propertyPath: m_Name
       value: Lumber Jake
@@ -2837,6 +2841,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3565182008339313367, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6130284329216270839, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
       propertyPath: m_Name
       value: Delogger (1)
@@ -3014,6 +3022,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 951888806642239257, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3565182008339313367, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6130284329216270839, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}

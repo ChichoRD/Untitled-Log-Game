@@ -32,6 +32,7 @@ public class TreeSpawner : MonoBehaviour
             Enabled = true,
             AutoReset = true
         };
+        _spawnTimer.Start();
 
         _spawnTimer.Elapsed += OnSpawnTimerElapsed;
     }
