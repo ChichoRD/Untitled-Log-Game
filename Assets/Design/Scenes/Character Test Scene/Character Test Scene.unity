@@ -382,6 +382,10 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1331373271}
+    - target: {fileID: 9171000597638143195, guid: 7547f7b508111604a890c8012b846bbb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4980
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7547f7b508111604a890c8012b846bbb, type: 3}
 --- !u!4 &262664431 stripped
@@ -1282,6 +1286,10 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1331373271}
+    - target: {fileID: 9171000597638143195, guid: 7547f7b508111604a890c8012b846bbb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4980
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7547f7b508111604a890c8012b846bbb, type: 3}
 --- !u!1001 &1078288659
@@ -1848,6 +1856,10 @@ PrefabInstance:
     - target: {fileID: 5254809860860311570, guid: de08673b6f1395049b1f379b041c58ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254809860860311788, guid: de08673b6f1395049b1f379b041c58ca, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5254809860860311789, guid: de08673b6f1395049b1f379b041c58ca, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
