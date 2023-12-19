@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Timers;
 using UnityEditor;
 using UnityEngine;
 
@@ -14,8 +13,7 @@ public class TreeSpawner : MonoBehaviour
     private Transform[] _loganTransforms;
 
     
-
-    private Timer _spawnTimer;
+    private Coroutine _spawnTreeCoroutine;
 
     [SerializeField]
     private float _spawnTime = 1.0f;
@@ -23,32 +21,56 @@ public class TreeSpawner : MonoBehaviour
     [SerializeField]
     private GameObject _treePrefab;
 
+    [SerializeField]
+    private bool _beginOnStart = true;
 
-
-    private void Awake()
+    private void Start()
     {
-        _spawnTimer = new Timer(_spawnTime * 1000)
-        {
-            Enabled = true,
-            AutoReset = true
-        };
-        _spawnTimer.Start();
-
-        _spawnTimer.Elapsed += OnSpawnTimerElapsed;
+        if (_beginOnStart)
+            TryStartTreeSpawnCoroutine();
     }
 
-    private void OnSpawnTimerElapsed(object sender, ElapsedEventArgs e)
+    public bool TryStartTreeSpawnCoroutine()
+    {
+        if (_spawnTreeCoroutine != null)
+            return false;
+
+        _spawnTreeCoroutine = StartCoroutine(SpawnTreeCoroutine());
+        return true;
+    }
+
+    public bool TryStopTreeSpawnCoroutine()
+    {
+        if (_spawnTreeCoroutine == null)
+            return false;
+
+        StopCoroutine(_spawnTreeCoroutine);
+        _spawnTreeCoroutine = null;
+        return true;
+    }
+
+    private IEnumerator SpawnTreeCoroutine()
+    {
+        while (enabled)
+        {
+            yield return new WaitForSeconds(_spawnTime);
+            OnTreeSpawn();
+        }
+    }
+
+    private void OnTreeSpawn()
     {
         GameObject instantiatedTree = Instantiate(_treePrefab, _spawnTransform);
 
-       TreeInputProvider treeInput = instantiatedTree.GetComponentInChildren<TreeInputProvider>();
+        TreeInputProvider treeInput = instantiatedTree.GetComponentInChildren<TreeInputProvider>();
 
-
-        Transform treeTarget = _loganTransforms[Random.Range(0,_loganTransforms.Length)];
+        Transform treeTarget = _loganTransforms[Random.Range(0, _loganTransforms.Length)];
 
         if (treeInput != null)
         {
             treeInput.LoganTransform = treeTarget;
         }
+
     }
+
 }
