@@ -17,7 +17,8 @@ namespace GenericInteractions.Grabbable
         private AnimationCurveGrabRequestInfo _grabRequestInfo;
 
         private IInteractableProvider _interactableProvider;
-        private IInteractionHandler _interactionHandler;
+        private IInteractionHandler<IGrabRequestInfo, IGrabResponse> _interactionHandler;
+        private IInteractionHistoryService<IGrabRequestInfo, IGrabResponse> _interactionHistoryService;
 
         private void Awake()
         {
@@ -31,8 +32,12 @@ namespace GenericInteractions.Grabbable
 
         private void Start()
         {
-            _interactionHandler = GetComponentsInChildren<IInteractionHandler>().FirstOrDefault();
             _interactableProvider = GetComponentsInChildren<IInteractableProvider>().FirstOrDefault();
+            IInteractionHandler interactionHandler = GetComponentsInChildren<IInteractionHandler>().FirstOrDefault();
+
+            HistoricalInteractionHandler<IGrabRequestInfo, IGrabResponse> historicalInteractionHandler = new HistoricalInteractionHandler<IGrabRequestInfo, IGrabResponse>(interactionHandler);
+            _interactionHandler = historicalInteractionHandler;
+            _interactionHistoryService = historicalInteractionHandler;
         }
 
         private void OnDisable()
