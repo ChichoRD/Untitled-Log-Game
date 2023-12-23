@@ -1,4 +1,4 @@
-using InteractionSystem.Data;
+using InteractionSystem.Data.Response;
 using InteractionSystem.Interactable;
 using InteractionSystem.Provider;
 using System.Collections.Generic;

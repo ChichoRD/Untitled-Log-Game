@@ -2,7 +2,7 @@
 
 namespace GenericInteractions.Grabbable
 {
-    internal interface IGrabRequestInfo
+    public interface IGrabRequestInfo
     {
         Transform GrabParent { get; }
         float GetGrabProgress(float grabTime);

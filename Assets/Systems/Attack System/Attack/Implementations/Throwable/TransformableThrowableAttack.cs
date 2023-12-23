@@ -18,6 +18,10 @@ namespace AttackSystem.Attack.Implementations.Throwable
 
         private async Task Throw(Vector3 throwVelocityIncrement)
         {
+            //TODO - Segregate
+            _rigidbody.bodyType = RigidbodyType2D.Dynamic;
+            _rigidbody.transform.SetParent(null);
+
             Vector3 transformedThrowVelocity = _throwingTransformation.MultiplyVector(throwVelocityIncrement);
             Vector3 transformedThrowForce = transformedThrowVelocity * _rigidbody.mass / Time.fixedDeltaTime;
             _rigidbody.AddForce(transformedThrowForce, ForceMode2D.Force);

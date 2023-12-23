@@ -1,10 +1,11 @@
-﻿using InteractionSystem.Data;
+﻿using InteractionSystem.Data.Response;
 using UnityEngine;
 
 namespace GenericInteractions.Grabbable
 {
-    internal interface IGrabResponse : IInteractionResponse
+    public interface IGrabResponse : IInteractionResponse
     {
         Coroutine GrabCoroutine { get; }
+        bool IsGrabbed { get; }
     }
 }

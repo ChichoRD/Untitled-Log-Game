@@ -1,4 +1,10 @@
-﻿using System;
+﻿using GenericInteractions.Grabbable;
+using InteractionSystem.Data;
+using InteractionSystem.Data.Response;
+using InteractionSystem.Handler;
+using InteractionSystem.Handler.Observable;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,11 +18,12 @@ namespace AttackSystem.Attacker.Implementations.Inputted
         [SerializeField]
         private Camera _camera;
 
-        private IAttacker _attacker;
-        private IInputtableAttacker<Vector2> _inputtableAttacker;
+        private IList<IInteractableResponse<IGrabRequestInfo, IGrabResponse>> _grabResponses;
+        private IObservableInteractionResponseHandler<IGrabRequestInfo, IGrabResponse> _observableInteractionResponseHandler;
 
         private void Awake()
         {
+            _grabResponses = new List<IInteractableResponse<IGrabRequestInfo, IGrabResponse>>();
             _attackAction.action.performed += OnAttackActionPerformed;
         }
 
@@ -27,8 +34,9 @@ namespace AttackSystem.Attacker.Implementations.Inputted
 
         private void Start()
         {
-            _attacker = GetComponentInChildren<IAttacker>();
-            _inputtableAttacker = GetComponentInChildren<IInputtableAttacker<Vector2>>();
+            _observableInteractionResponseHandler = GetComponentInChildren<IObservableInteractionResponseHandler<IGrabRequestInfo, IGrabResponse>>();
+
+            _observableInteractionResponseHandler.InteractionResponseProcessed += OnInteractionResponseProcessed;
         }
 
         private void OnDisable()
@@ -38,20 +46,45 @@ namespace AttackSystem.Attacker.Implementations.Inputted
 
         private void OnDestroy()
         {
+            _observableInteractionResponseHandler.InteractionResponseProcessed -= OnInteractionResponseProcessed;
             _attackAction.action.performed -= OnAttackActionPerformed;
         }
 
+        private void OnInteractionResponseProcessed(IInteractableResponse<IGrabRequestInfo, IGrabResponse> interactionResponse) =>
+            _grabResponses.Add(interactionResponse);
+
         private void OnAttackActionPerformed(InputAction.CallbackContext context)
         {
-            Vector2 mousePosition = _attackAction.action.ReadValue<Vector2>();
-            Vector3 worldMousePosition = _camera.ScreenToWorldPoint(mousePosition);
-            const float Z_DEPTH = 0.0f;
-            worldMousePosition.z = Z_DEPTH;
+            IList<IInteractableResponse<IGrabRequestInfo, IGrabResponse>> ungrabbedInteractables = new List<IInteractableResponse<IGrabRequestInfo, IGrabResponse>>();
+            foreach (IInteractableResponse<IGrabRequestInfo, IGrabResponse> grabResponse in _grabResponses)
+            {
+                if (!grabResponse.Response.Success
+                    || !grabResponse.Response.IsGrabbed
+                    || grabResponse.Interactable is not MonoBehaviour behaviour)
+                {
+                    ungrabbedInteractables.Add(grabResponse);
+                    continue;
+                }
 
-            Vector3 direction = (worldMousePosition - transform.position).normalized;
+                IInputtableAttacker<Vector2> inputtableAttacker = behaviour.GetComponentInChildren<IInputtableAttacker<Vector2>>();
+                if (inputtableAttacker != null)
+                {
+                    Vector2 mousePosition = _attackAction.action.ReadValue<Vector2>();
+                    Vector3 worldMousePosition = _camera.ScreenToWorldPoint(mousePosition);
+                    const float Z_DEPTH = 0.0f;
+                    worldMousePosition.z = Z_DEPTH;
 
-            _inputtableAttacker.SetInput(direction);
-            _attacker.TryAttack();
+                    Vector3 direction = (worldMousePosition - transform.position).normalized;
+                    inputtableAttacker.SetInput(direction);
+                }
+
+                IAttacker attacker = behaviour.GetComponentInChildren<IAttacker>();
+                if (attacker != null)
+                    attacker.TryAttack();
+            }
+
+            foreach (IInteractableResponse<IGrabRequestInfo, IGrabResponse> ungrabbedInteractable in ungrabbedInteractables)
+                _grabResponses.Remove(ungrabbedInteractable);
         }
     }
 }

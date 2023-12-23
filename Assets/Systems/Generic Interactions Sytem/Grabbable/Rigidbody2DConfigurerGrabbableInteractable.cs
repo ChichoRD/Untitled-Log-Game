@@ -1,4 +1,4 @@
-﻿using InteractionSystem.Data;
+﻿using InteractionSystem.Data.Request;
 using InteractionSystem.Interactable;
 using System.Linq;
 using UnityEngine;

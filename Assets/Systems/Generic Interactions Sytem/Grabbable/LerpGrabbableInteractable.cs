@@ -1,4 +1,4 @@
-using InteractionSystem.Data;
+using InteractionSystem.Data.Request;
 using InteractionSystem.Interactable;
 using System.Collections;
 using UnityEngine;
@@ -15,6 +15,7 @@ namespace GenericInteractions.Grabbable
         public IGrabResponse TryInteract(IInteractionRequest<IGrabRequestInfo> interactionRequestInfo) =>
             new GrabResponse(
                 _grabCoroutine,
+                () => _transform.parent == interactionRequestInfo.RequestInfo.GrabParent,
                 TryStartGrabCoroutine(interactionRequestInfo.RequestInfo, ref _grabCoroutine)
                 || (TryStopGrabCoroutine(ref _grabCoroutine)
                     && TryStartGrabCoroutine(interactionRequestInfo.RequestInfo, ref _grabCoroutine)));

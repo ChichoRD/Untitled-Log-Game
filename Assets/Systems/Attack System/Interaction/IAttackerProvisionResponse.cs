@@ -1,5 +1,5 @@
 ﻿using AttackSystem.Attacker;
-using InteractionSystem.Data;
+using InteractionSystem.Data.Response;
 
 namespace AttackSystem.Interaction
 {
