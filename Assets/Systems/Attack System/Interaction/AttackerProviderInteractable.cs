@@ -6,9 +6,12 @@ namespace AttackSystem.Interaction
 {
     internal class AttackerProviderInteractable : MonoBehaviour, IResponseOnlyInteractable<IAttackerProvisionResponse>
     {
+        [SerializeField]
+        private Transform _searchRoot;
+
         public IAttackerProvisionResponse TryInteract()
         {
-            IAttacker attacker = GetComponent<IAttacker>();
+            IAttacker attacker = _searchRoot.GetComponentInChildren<IAttacker>();
             return new AttackerProvisionResponse(attacker, attacker != null);
         }
     }

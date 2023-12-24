@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3272274957671447704}
   - component: {fileID: 5356591419770994834}
   - component: {fileID: 1576122578394218075}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5001
+  m_SortingOrder: 4993
   m_Sprite: {fileID: 21300000, guid: 107e5c87b1c6a0d43935e6cec56bea05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -110,7 +110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6301569171922925247}
   - component: {fileID: 8288844517100743783}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Parenting Garabbable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,13 +124,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346600381755726329}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1577967885028257171}
-  m_Father: {fileID: 6997168980107275968}
+  m_Father: {fileID: 623022229686347165}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8288844517100743783
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac7d2376c1d8cb47862162d49708a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parentBeforeGrab: 0
+  _parentBeforeGrab: 1
   _transform: {fileID: 8953988337520972957}
 --- !u!1 &1967873920603734752
 GameObject:
@@ -157,8 +157,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2579386088896494979}
   - component: {fileID: 1512242954972002813}
-  m_Layer: 7
-  m_Name: Rigidbody Configurer
+  m_Layer: 6
+  m_Name: Rigidbody Configurer Droppable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,12 +171,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967873920603734752}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 9124545567027098585}
+  m_Children:
+  - {fileID: 9124545567027098585}
+  m_Father: {fileID: 6997168980107275968}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1512242954972002813
@@ -203,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6712044057175597636}
   - component: {fileID: 2601734884223684371}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Grabbable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6997168980107275968}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,8 +267,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6301569171922925247}
-  - {fileID: 9124545567027098585}
+  - {fileID: 2579386088896494979}
+  - {fileID: 623022229686347165}
   m_Father: {fileID: 8953988337520972957}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -281,7 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9124545567027098585}
   - component: {fileID: 350373325779891061}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Unparenting Droppable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,14 +296,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2937826372076726414}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2579386088896494979}
-  m_Father: {fileID: 6997168980107275968}
-  m_RootOrder: 1
+  m_Children: []
+  m_Father: {fileID: 2579386088896494979}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &350373325779891061
 MonoBehaviour:
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 8953988337520972957}
   - component: {fileID: 7395186745893453975}
   - component: {fileID: 4144846542727716766}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Log(an)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1577967885028257171}
   - component: {fileID: 8653272570256871172}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Rigidbody Configurer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,6 +436,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 4144846542727716766}
   _rigidbodyType: 1
+--- !u!1 &7366506540489720292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 623022229686347165}
+  - component: {fileID: 4317275402274668630}
+  m_Layer: 6
+  m_Name: Layered Grabbable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &623022229686347165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7366506540489720292}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6301569171922925247}
+  m_Father: {fileID: 6997168980107275968}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4317275402274668630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7366506540489720292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45423688d25b227469230fdb232590ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactableLayer: 2
 --- !u!1 &8160888791505881523
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,7 +493,7 @@ GameObject:
   - component: {fileID: 4836615837346142093}
   - component: {fileID: 1239619527593237861}
   - component: {fileID: 1856291844401416668}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Burning Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}

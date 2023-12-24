@@ -1,9 +1,8 @@
-﻿using GenericInteractions.Grabbable;
-using InteractionSystem.Data;
+﻿using AttackSystem.Interaction;
+using GenericInteractions.Grabbable;
 using InteractionSystem.Data.Response;
-using InteractionSystem.Handler;
 using InteractionSystem.Handler.Observable;
-using System;
+using InteractionSystem.Interactable;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -35,7 +34,6 @@ namespace AttackSystem.Attacker.Implementations.Inputted
         private void Start()
         {
             _observableInteractionResponseHandler = GetComponentInChildren<IObservableInteractionResponseHandler<IGrabRequestInfo, IGrabResponse>>();
-
             _observableInteractionResponseHandler.InteractionResponseProcessed += OnInteractionResponseProcessed;
         }
 
@@ -58,33 +56,59 @@ namespace AttackSystem.Attacker.Implementations.Inputted
             IList<IInteractableResponse<IGrabRequestInfo, IGrabResponse>> ungrabbedInteractables = new List<IInteractableResponse<IGrabRequestInfo, IGrabResponse>>();
             foreach (IInteractableResponse<IGrabRequestInfo, IGrabResponse> grabResponse in _grabResponses)
             {
-                if (!grabResponse.Response.Success
-                    || !grabResponse.Response.IsGrabbed
-                    || grabResponse.Interactable is not MonoBehaviour behaviour)
+                if (!IsSuitableForAttacker(grabResponse, out IResponseOnlyInteractable<IAttackerProvisionResponse> attackerProvider))
                 {
                     ungrabbedInteractables.Add(grabResponse);
                     continue;
                 }
 
-                IInputtableAttacker<Vector2> inputtableAttacker = behaviour.GetComponentInChildren<IInputtableAttacker<Vector2>>();
-                if (inputtableAttacker != null)
-                {
-                    Vector2 mousePosition = _attackAction.action.ReadValue<Vector2>();
-                    Vector3 worldMousePosition = _camera.ScreenToWorldPoint(mousePosition);
-                    const float Z_DEPTH = 0.0f;
-                    worldMousePosition.z = Z_DEPTH;
-
-                    Vector3 direction = (worldMousePosition - transform.position).normalized;
-                    inputtableAttacker.SetInput(direction);
-                }
-
-                IAttacker attacker = behaviour.GetComponentInChildren<IAttacker>();
-                if (attacker != null)
-                    attacker.TryAttack();
+                IAttackerProvisionResponse attackerProvisionResponse = attackerProvider.TryInteract();
+                _ = attackerProvisionResponse.Success
+                    && TryAttackWith(attackerProvisionResponse.GetAttacker(), context);
             }
 
             foreach (IInteractableResponse<IGrabRequestInfo, IGrabResponse> ungrabbedInteractable in ungrabbedInteractables)
                 _grabResponses.Remove(ungrabbedInteractable);
+        }
+
+        private bool TryAttackWith(IAttacker attacker, InputAction.CallbackContext context)
+        {
+            if (attacker is MonoBehaviour attackerBehaviour
+                && TryGetComponentInChildren(attackerBehaviour, out IInputtableAttacker<Vector2> inputtableAttacker))
+            {
+                Vector2 attackDirection = context.control.device is Pointer
+                    ? AttackDirectionFromCameraPointer(_camera, context.ReadValue<Vector2>())
+                    : context.ReadValue<Vector2>();
+
+                inputtableAttacker.SetInput(attackDirection);
+            }
+
+            return attacker.TryAttack();
+        }
+
+        private static Vector2 AttackDirectionFromCameraPointer(Camera camera, Vector2 pointerPosition, float zDepth = 0.0f)
+        {
+            Vector3 worldPointerPosition = camera.ScreenToWorldPoint(pointerPosition);
+            worldPointerPosition.z = zDepth;
+
+            Vector3 direction = (worldPointerPosition - camera.transform.position).normalized;
+            return direction;
+        }
+
+        private static bool TryGetComponentInChildren<T>(MonoBehaviour behaviour, out T component)
+        {
+            component = behaviour.GetComponentInChildren<T>();
+            return component != null;
+        }
+
+        private static bool IsSuitableForAttacker(IInteractableResponse<IGrabRequestInfo, IGrabResponse> grabResponse, out IResponseOnlyInteractable<IAttackerProvisionResponse> attackerProvider)
+        {
+            attackerProvider = default;
+
+            return grabResponse.Response.Success
+                    && grabResponse.Response.IsGrabbed
+                    && grabResponse.Interactable is MonoBehaviour behaviour
+                    && behaviour.TryGetComponent(out attackerProvider);
         }
     }
 }
