@@ -1135,10 +1135,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2664542082304395274}
+  - component: {fileID: 125610668706242189}
   - component: {fileID: 959705641389246119}
   - component: {fileID: 3963558814183534633}
   m_Layer: 3
-  m_Name: Grab Handler 2
+  m_Name: Grab Handler 2 / Axe Attacker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1160,6 +1161,20 @@ Transform:
   m_Father: {fileID: 360406849657207591}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &125610668706242189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7817735476125470329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33ddc300a53ba1d46b56a4071c2e752c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackAction: {fileID: -9060398859550078495, guid: 9074b127a1cff224f8078d4414332521, type: 3}
+  _camera: {fileID: 0}
 --- !u!114 &959705641389246119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1221,10 +1236,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 902661929250214699}
+  - component: {fileID: 3369934701998930271}
   - component: {fileID: 8209079046713456061}
   - component: {fileID: 4163142572956769618}
   m_Layer: 3
-  m_Name: Grab Handler 0
+  m_Name: Grab Handler 0 / Axe Attacker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1246,6 +1262,20 @@ Transform:
   m_Father: {fileID: 360406849657207591}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3369934701998930271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8841738616530783516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33ddc300a53ba1d46b56a4071c2e752c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackAction: {fileID: -9060398859550078495, guid: 9074b127a1cff224f8078d4414332521, type: 3}
+  _camera: {fileID: 0}
 --- !u!114 &8209079046713456061
 MonoBehaviour:
   m_ObjectHideFlags: 0

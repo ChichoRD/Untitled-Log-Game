@@ -5,9 +5,9 @@ using UnityEngine;
 
 namespace AttackSystem.Attack.Implementations.Throwable
 {
-    internal class DroppableThrowableAttack : MonoBehaviour, IAttack<VelocityAttackData>
+    internal class DroppableThrowableAttack : MonoBehaviour, IAttack<IVelocityAttackData>
     {
-        private IAttack<VelocityAttackData> _throwableAttack;
+        private IAttack<IVelocityAttackData> _throwableAttack;
         private IInteractableProvider _interactableProvider;
 
         [SerializeField]
@@ -15,11 +15,11 @@ namespace AttackSystem.Attack.Implementations.Throwable
 
         private void Start()
         {
-            _throwableAttack = GetComponentsInChildren<IAttack<VelocityAttackData>>().FirstOrDefault(a => a != (IAttack<VelocityAttackData>)this);
+            _throwableAttack = GetComponentsInChildren<IAttack<IVelocityAttackData>>().FirstOrDefault(a => a != (IAttack<IVelocityAttackData>)this);
             _interactableProvider = GetComponentInChildren<IInteractableProvider>();
         }
 
-        public Task TryAttack(VelocityAttackData attackData) =>
+        public Task TryAttack<UAttackData>(UAttackData attackData) where UAttackData : IVelocityAttackData =>
             (!_interactableProvider.GetAgnosticInteractables().FirstOrDefault().TryInteract() && _cancelAttackOnDropFailure)
             ? Task.CompletedTask
             : _throwableAttack.TryAttack(attackData);

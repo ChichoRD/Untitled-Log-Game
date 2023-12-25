@@ -15,14 +15,14 @@ namespace AttackSystem.Attacker.Implementations.Inputted
         [SerializeField]
         private Rigidbody2D _rigidbody;
 
-        private IAttack<VelocityAttackData> _attack;
+        private IAttack<IVelocityAttackData> _attack;
         private Task _lastAttackTask = Task.CompletedTask;
         private Vector2 _lastAttackDirection;
 
 
         private void Start()
         {
-            _attack = GetComponentInChildren<IAttack<VelocityAttackData>>();
+            _attack = GetComponentInChildren<IAttack<IVelocityAttackData>>();
         }
 
         public bool TryAttack()

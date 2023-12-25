@@ -2403,7 +2403,7 @@ Transform:
   m_Children:
   - {fileID: 1781288464}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &741755344
 PrefabInstance:
@@ -2643,6 +2643,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 798386692}
     m_Modifications:
+    - target: {fileID: 144944858130703353, guid: a6638481a75a22b49b369b5dae5dd122, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 1696979828}
     - target: {fileID: 969125713725936824, guid: a6638481a75a22b49b369b5dae5dd122, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2695,6 +2699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lumber Jake Bundle
       objectReference: {fileID: 0}
+    - target: {fileID: 3276607778070856747, guid: a6638481a75a22b49b369b5dae5dd122, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 1696979828}
     - target: {fileID: 5477098077638124727, guid: a6638481a75a22b49b369b5dae5dd122, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.00000047683716
@@ -3852,7 +3860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5254809860860311789, guid: de08673b6f1395049b1f379b041c58ca, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1.0002592
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5254809860860311790, guid: de08673b6f1395049b1f379b041c58ca, type: 3}
       propertyPath: m_Name
@@ -4509,6 +4517,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2313407406965860497, guid: c5cf94a6d678b634dae27da65dd0290a, type: 3}
   m_PrefabInstance: {fileID: 1589687830}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1613223515
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 951888806642239257, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 951888806642239257, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 951888806642239257, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 951888806642239257, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 951888806642239257, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 951888806642239257, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 951888806642239257, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 951888806642239257, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 951888806642239257, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 951888806642239257, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 951888806642239257, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963267336825092687, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: <LoganTransform>k__BackingField
+      value: 
+      objectReference: {fileID: 741755345}
+    - target: {fileID: 6130284329216270839, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
+      propertyPath: m_Name
+      value: Delogger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 955e8e7ebfad1e6458e747cf4c2de05b, type: 3}
 --- !u!1001 &1618897526
 PrefabInstance:
   m_ObjectHideFlags: 0

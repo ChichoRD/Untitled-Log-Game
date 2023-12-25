@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3834452894042328686, guid: cb8b3eec97ee40a42b770b5b77e7222a, type: 3}
+      propertyPath: _attackDamage
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4289595630236314876, guid: cb8b3eec97ee40a42b770b5b77e7222a, type: 3}
       propertyPath: _interactableLayer
       value: 4

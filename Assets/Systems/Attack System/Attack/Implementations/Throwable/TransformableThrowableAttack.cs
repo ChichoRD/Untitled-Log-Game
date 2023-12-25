@@ -1,10 +1,9 @@
-﻿using InteractionSystem.Interactable;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using UnityEngine;
 
 namespace AttackSystem.Attack.Implementations.Throwable
 {
-    internal class TransformableThrowableAttack : MonoBehaviour, IAttack<VelocityAttackData>
+    internal class TransformableThrowableAttack : MonoBehaviour, IAttack<IVelocityAttackData>
     {
         [SerializeField]
         private Rigidbody2D _rigidbody;
@@ -12,7 +11,8 @@ namespace AttackSystem.Attack.Implementations.Throwable
         [SerializeField]
         private Matrix4x4 _throwingTransformation = Matrix4x4.identity;
 
-        public Task TryAttack(VelocityAttackData attackData)
+
+        public Task TryAttack<UAttackData>(UAttackData attackData) where UAttackData : IVelocityAttackData
         {
             return Throw(attackData.VelocityIncrement);
         }
